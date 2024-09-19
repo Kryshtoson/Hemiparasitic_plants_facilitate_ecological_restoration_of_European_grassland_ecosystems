@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="11d9c1c7-a37a-4341-ba60-fa1e81c900a5" name="Changes" comment="interakce PC1:treatment odstranena">
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/1_vegetace.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/1_zvirata.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/2_vegetace.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/3_vegetace.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/BK_Calamagrostis_Biomass.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/BK_Number-of-species.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BK_sekce2023/BK_multivar_all.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Rplots.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/completeness.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dissimilarity_to_target.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meta_data/div_index.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meta_data/no_spe.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/meta_data/reference-plots.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/1_Vegetation_univariate.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/1_Vegetation_univariate.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/1b_Vegetation_univariate-PC2.Rmd.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/1b_Vegetation_univariate-PC2.Rmd.rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/2_Vegetation_landscape-contex.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/2_Vegetation_landscape-contex.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/3_Vegetation_multivariate.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/3_Vegetation_multivariate_interakce-v-kov.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/4_Arhtropoda_univariate.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/5_Arhtropoda_multivariate.Rmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/S3_vegetation_multivar_backs.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/df_new.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/envi.pairs.pdf" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/meta_veg_to_comp2.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/sites_with_soil.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/old_scripts/trouble_shooting.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Arthropods_species-traits_20230126.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_dry-biomass-weight_20220302.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_dry-biomass-weight_20240514.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_sample-sites_20220208.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_species-data-long_20220208.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_species-data-long_20240514.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_species-data-long_with_Rhinanthus_20220107.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_species-data-long_with_Rhinanthus_20220514.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis-experiment_species-data-long_with_Rhinanthus_20240514.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis_Arachnida_traits_20240509.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis_KRISI_PLOSTICE_PAVOUKOVCI_2_ii_2022_IM.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Calamagrostis_SKUPINY_fin_1_ii_2022_IM.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Target-vegetation_headers_20220223.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Target-vegetation_species-data-long_20220223.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/Target-vegetation_species-list_20220223.csv" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/target_vegetation.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/original_data/target_vegetation_20240517.xlsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/outputs/Arthropoda_richness_abundance.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/F0_background_data.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/F1_Figure1.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/F2_Figure2.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/F2_Figure2_refined.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/KILL_S1_vegetation_univariate.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/README.docx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/S3_vegetation_multivariate.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/S5_arthropoda_multivariate.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/Script1_univariate-models.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/Script2_univariate-models-Arthropoda.R" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/refined_scripts/guilds.R" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rAvailablePackageCache.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rAvailablePackageCache.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rGraphicsSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rSettings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/rSettings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/rpackages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Vegetation_univariate.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Vegetation_univariate.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1b_Vegetation_univariate-PC2.Rmd.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1b_Vegetation_univariate-PC2.Rmd.rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_Vegetation_landscape-contex.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_Vegetation_landscape-contex.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_Vegetation_multivariate.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/3_Vegetation_multivariate.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/4_Arhtropoda_univariate.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/5_Arhtropoda_multivariate.Rmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/1_vegetace.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/1_zvirata.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/2_vegetace.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/3_vegetace.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/BK_Calamagrostis_Biomass.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/BK_Number-of-species.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/BK_sekce/BK_multivar_all.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Calamagrostis_KRISI_PLOSTICE_PAVOUKOVCI_2_ii_2022_IM.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/Calamagrostis_SKUPINY_fin_1_ii_2022_IM.xlsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/background_head.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/background_spe_long.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/df.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/df_new.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sites.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/sites_with_soil.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/spe.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/species_list_sources.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/data/species_traits.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/envi.pairs.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/A.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/A.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/B.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/B.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/C.png" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/C.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/outputs/model_coefs.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/outputs/model_coefs.xlsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/panel2.R" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/trouble_shooting.R" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="RMarkdown.document" />
+        <option value="R Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2MS2YYgDhpbvL84EYkpK5JyN1RQ" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "R.S3_vegetation_multivariate.R.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "main",
+    "last_directory_selection": "C:/Users/krystof/Documents/R-project/2023/2023_Calamagrostis",
+    "last_opened_file_path": "C:/Users/krystof/Dropbox/PC (4)/Documents/R-project/2023/2023_Moravia_mowing",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-5a2391486177-2887949eec09-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.13763.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="11d9c1c7-a37a-4341-ba60-fa1e81c900a5" name="Changes" comment="" />
+      <created>1677746710797</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1677746710797</updated>
+      <workItem from="1708334114354" duration="32000" />
+      <workItem from="1708334155314" duration="13636000" />
+      <workItem from="1708360118687" duration="2105000" />
+      <workItem from="1708362424006" duration="25000" />
+      <workItem from="1709575211497" duration="3034000" />
+      <workItem from="1709583348933" duration="6304000" />
+      <workItem from="1709653988265" duration="11000" />
+      <workItem from="1709888410930" duration="16956000" />
+      <workItem from="1710011215258" duration="610000" />
+      <workItem from="1711642101622" duration="1398000" />
+      <workItem from="1711795729285" duration="5000" />
+      <workItem from="1711795780540" duration="1000" />
+      <workItem from="1712571960927" duration="7841000" />
+      <workItem from="1712749246717" duration="561000" />
+      <workItem from="1712750412180" duration="3902000" />
+      <workItem from="1712757924099" duration="2604000" />
+      <workItem from="1713607228517" duration="597000" />
+      <workItem from="1713772217686" duration="1442000" />
+      <workItem from="1713860811239" duration="1185000" />
+      <workItem from="1713862012968" duration="19000" />
+      <workItem from="1714333620543" duration="46000" />
+      <workItem from="1714333696305" duration="50000" />
+      <workItem from="1714740070772" duration="2445000" />
+      <workItem from="1714899203162" duration="6701000" />
+      <workItem from="1714988499204" duration="1193000" />
+      <workItem from="1714994803009" duration="2364000" />
+      <workItem from="1714997926862" duration="616000" />
+      <workItem from="1714999619419" duration="4196000" />
+      <workItem from="1715004749915" duration="5000" />
+      <workItem from="1715005298729" duration="2711000" />
+      <workItem from="1715072722705" duration="2502000" />
+      <workItem from="1715282992491" duration="5713000" />
+      <workItem from="1715532200555" duration="601000" />
+      <workItem from="1715543766266" duration="282000" />
+      <workItem from="1715715110124" duration="3348000" />
+      <workItem from="1715857915154" duration="5000" />
+      <workItem from="1715864148441" duration="1463000" />
+      <workItem from="1715957060063" duration="7672000" />
+    </task>
+    <task id="LOCAL-00001" summary="pycharm files">
+      <created>1677746735236</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1677746735236</updated>
+    </task>
+    <task id="LOCAL-00002" summary="adding calamagrostis cover">
+      <created>1677761010930</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1677761010930</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Jakub queries">
+      <created>1677770040193</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1677770040193</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Jakub queries 2">
+      <created>1678098193273</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1678098193273</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Jakub queries 2">
+      <created>1678098238876</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1678098238876</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Jakub queries 3">
+      <created>1678106980598</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1678106980598</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Jakub queries 4">
+      <created>1678267523875</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1678267523875</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Jakub queries 4">
+      <created>1678268161711</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1678268161711</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Jakub queries 4">
+      <created>1678278572560</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1678278572560</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Jakub queries 4">
+      <created>1678347472597</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1678347472597</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Jakub queries 5">
+      <created>1678475698536</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1678475698536</updated>
+    </task>
+    <task id="LOCAL-00012" summary="interakce PC1:treatment odstranena">
+      <created>1683796446456</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1683796446456</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="pycharm files" />
+    <MESSAGE value="adding calamagrostis cover" />
+    <MESSAGE value="Jakub queries" />
+    <MESSAGE value="Jakub queries 2" />
+    <MESSAGE value="Jakub queries 3" />
+    <MESSAGE value="Jakub queries 4" />
+    <MESSAGE value="Jakub queries 5" />
+    <MESSAGE value="interakce PC1:treatment odstranena" />
+    <option name="LAST_COMMIT_MESSAGE" value="interakce PC1:treatment odstranena" />
+  </component>
+</project>
