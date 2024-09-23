@@ -111,6 +111,7 @@ input_data |>
   facet_grid(name ~ group, scales = 'free_y', switch = 'y') +
   theme_bw() +
   theme(strip.background = element_blank(),
+        legend.title = element_blank(),
         strip.text.x = element_text(hjust = 0, size = 14),
         strip.text.y = element_text(hjust = .5, size = 14),
         strip.placement = 'outside',
