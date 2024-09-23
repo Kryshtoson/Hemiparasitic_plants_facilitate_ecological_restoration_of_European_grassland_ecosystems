@@ -152,9 +152,10 @@ data |>
   mutate(name = factor(name, levels = c('biomass', 'cala_cover', 'richness', 'evenness', 'community_cover', 'target'),
                        labels = lx)) -> df
 
+df |> distinct(name)
 df |>
   group_by(name, Treatment, year) |>
-  mutate(mean = ifelse(name == 'Cover of Calamagrostis (%)',
+  mutate(mean = ifelse(name == "'Cover of' ~ italic(Calamagrostis) ~ '(%)'",
                 mean*100, mean)) |>
   summarise(
     sem = sd(mean) / sqrt(n()),

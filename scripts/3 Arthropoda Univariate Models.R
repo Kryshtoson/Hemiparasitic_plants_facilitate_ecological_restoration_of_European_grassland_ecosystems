@@ -5,7 +5,6 @@ library(readxl)
 library(DSSAT)
 
 #' A comparison of species richness and abundance (number of individuals) per different groups
-
 sites <- read_csv('original_data/Experiment_sample-sites_20220208.csv') %>%
   mutate(abandoned = 0) %>%
   mutate_cond(site %in% c('BAR', 'CER', 'DUB', 'LET', 'POD', 'SVI'), abandoned = 1)
@@ -89,7 +88,7 @@ mods |>
 #' ===========================================================================================
 #' plotting Figure 3
 #' ===========================================================================================
-inputdata |>
+input_data |>
   mutate_cond(treatment == 5, treatment = 3) %>%
   mutate_cond(treatment == 6, treatment = 4) %>%
   mutate(treatment = factor(treatment),
@@ -100,16 +99,24 @@ inputdata |>
   ggplot(aes(treatment, value)) +
   geom_boxplot(
     aes(fill = treatment),
-    show.legend = F) +
+    show.legend = T) +
   scale_y_log10() +
   labs(x = 'Treatment') +
-  scale_fill_manual(values = c('grey50', '#a6bddb', '#0570b0', '#fec44f', '#cc4c02')) +
-  facet_grid(name ~ group, scales = 'free_y', space = 'free_y', switch = 'y') +
+  scale_fill_manual(values = c('grey50', '#a6bddb', '#0570b0', '#fec44f', '#cc4c02'),
+                    labels = c('Unmown',
+                                       'Mown once (yearly)',
+                                       'Mown twice',
+                                       '*Rhinanthus* and mown once',
+                                       '*Rhinanthus* and mown twice')) +
+  facet_grid(name ~ group, scales = 'free_y', switch = 'y') +
   theme_bw() +
   theme(strip.background = element_blank(),
         strip.text.x = element_text(hjust = 0, size = 14),
         strip.text.y = element_text(hjust = .5, size = 14),
         strip.placement = 'outside',
+        legend.text = element_markdown(),
+        legend.justification = 'left',
+        legend.position = 'bottom',
         axis.title.y = element_blank())
 
 ggsave('results/Figure 3.svg', height = 6, width = 8)
