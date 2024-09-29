@@ -38,7 +38,8 @@ read_csv('original_data/experiment_species-data-long_20240514.csv') |>
   filter(form != 'Calamagrostis') |>
   group_by(site) |>
   mutate(plot = paste0(site, year, treatment))  |>
-ungroup() -> guildy_kytky
+  ungroup() -> guildy_kytky
+
 
 m_kytky <- lme(log(cover_sum) ~ form * treatment * year, random = ~1 | site / treatment / plot,
                data = guildy_kytky |> mutate(site = str_sub(site, 1, 3)))
@@ -65,25 +66,49 @@ tibble(group = c('Auchenorrhyncha', 'Heteroptera', 'Arachnida'),
   separate(form, c('form', 'Ara_type'), sep = '_') |>
   mutate(group = ifelse(!is.na(Ara_type), paste(group, Ara_type), group)) |>
   mutate(treatment = factor(treatment, levels = c(1, 0, 2, 3, 4)),
-       form = fct_relevel(factor(form), 'Graminoid'),
-       group = factor(group),
-       site = factor(site)) |>
+         form = fct_relevel(factor(form), 'Graminoid'),
+         group = factor(group),
+         site = factor(site)) |>
   group_by(group, treatment, form, site) |>
   summarise(cover_sum = sum(value)) |>
   arrange(group, form) |>
   group_by(group, site, treatment) |>
   mutate(proportion = cover_sum / sum(cover_sum)) -> guildy_hmyz
 
-auch <- guildy_hmyz |> filter(group == 'Auchenorrhyncha')
+
+auch <- guildy_hmyz |>
+  filter(group == 'Auchenorrhyncha') |>
+  ungroup() |>
+  expand(nesting(site, treatment),
+         nesting(group, form)) |>
+  left_join(guildy_hmyz) |>
+  mutate(cover_sum = replace_na(cover_sum, 0))
+
 hete <- guildy_hmyz |>
   filter(group == 'Heteroptera') |>
+  ungroup() |>
+  expand(nesting(site, treatment),
+         nesting(group, form)) |>
+  left_join(guildy_hmyz) |>
+  mutate(cover_sum = replace_na(cover_sum, 0)) |>
   filter(!(form == 'Conifer' | form == 'Moss'))
-ara_hun <- guildy_hmyz |>
-  filter(group == 'Arachnida hunters')
-ara_stru <- guildy_hmyz |>
-  filter(group == 'Arachnida structure')
 
-table(guildy_hmyz$group)
+ara_hun <- guildy_hmyz |>
+  filter(group == 'Arachnida hunters') |>
+  ungroup() |>
+  expand(nesting(site, treatment),
+         nesting(group, form)) |>
+  left_join(guildy_hmyz) |>
+  mutate(cover_sum = replace_na(cover_sum, 0))
+
+ara_stru <- guildy_hmyz |>
+  filter(group == 'Arachnida structure') |>
+  ungroup() |>
+  expand(nesting(site, treatment),
+         nesting(group, form)) |>
+  left_join(guildy_hmyz) |>
+  mutate(cover_sum = replace_na(cover_sum, 0))
+
 m_auch <- lme(log1p(cover_sum) ~ form * treatment, random = ~1 | site / treatment, data = auch |> mutate(site = str_sub(site, 1, 3)))
 m_hete <- lme(log1p(cover_sum) ~ form * treatment, random = ~1 | site / treatment, data = hete |> mutate(site = str_sub(site, 1, 3)))
 m_arahu <- lme(log1p(cover_sum) ~ form * treatment, random = ~1 | site / treatment, data = ara_hun |> mutate(site = str_sub(site, 1, 3)))
@@ -129,6 +154,8 @@ list(broom.mixed::tidy(m_auch),
   setNames(c('Auchenorhyncha', 'Heteroptera', 'Arachnida_hunters', 'Arachnida_structure')) |>
   write_xlsx('outputs/Coefficients Arthropoda Guilds.xlsx')
 
+read_xlsx('outputs/Coefficients Arthropoda Guilds.xlsx', 'Heteroptera') |>
+  mutate(p.value = round(p.value, 3))
 
 cols1 <- c(`*Calamagrostis*` = '#f97971',
            Herb = '#9091c8',
@@ -138,6 +165,11 @@ cols1 <- c(`*Calamagrostis*` = '#f97971',
            Predator = 'grey40')
 
 guildy_hmyz |>
+  ungroup() |>
+  expand(nesting(site, treatment),
+         nesting(group, form)) |>
+  left_join(guildy_hmyz) |>
+  mutate(cover_sum = replace_na(cover_sum, 0)) |>
   filter(group != 'Arachnida structure' & group != 'Arachnida hunters') |>
   filter(!(form == 'Conifer' | form == 'Moss')) |>
   mutate(Treatment = factor(treatment, levels = c(0:4),
@@ -146,9 +178,12 @@ guildy_hmyz |>
                                        'Mown twice',
                                        '*Rhinanthus* and mown once',
                                        '*Rhinanthus* and mown twice')),
+         group = factor(group, levels = c('Auchenorrhyncha', 'Heteroptera')),
          form = factor(form, levels = c('Calamagrostis', 'Graminoid', 'Herb', 'Predator'),
                        labels = c('*Calamagrostis*', 'Graminoid', 'Herb', 'Predator'))) |>
   group_by(group, form, Treatment) |>
+  ungroup() |>
+  complete(Treatment, site, nesting(group, form), fill = list(cover_sum = 0)) |>
   ggplot(aes(Treatment, cover_sum)) +
   geom_boxplot(aes(fill = form), alpha = 1) +
   coord_flip() +
@@ -157,7 +192,8 @@ guildy_hmyz |>
                     values = cols1, drop = F) +
   scale_colour_manual(name = 'Trophic specialization',
                       values = cols1, drop = F) +
-  scale_y_log10(expand = c(0, 0, .02, .02)) +
+  scale_y_continuous(trans=scales::pseudo_log_trans(base = 10),
+                     breaks = c(0, 1, 3, 10, 30, 100)) +
   scale_x_discrete(limits = rev) +
   labs(y = 'Number of individuals') +
   theme_bw() +
