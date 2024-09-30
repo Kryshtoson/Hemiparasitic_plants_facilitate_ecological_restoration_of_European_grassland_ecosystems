@@ -3,6 +3,7 @@ library(nlme)
 library(tidyverse)
 library(readxl)
 library(DSSAT)
+library(ggtext)
 
 #' A comparison of species richness and abundance (number of individuals) per different groups
 sites <- read_csv('original_data/Experiment_sample-sites_20220208.csv') %>%
@@ -96,6 +97,8 @@ input_data |>
     pivot_longer(c(abundance, richness)) |>
     mutate(name = factor(name, levels = c('abundance', 'richness'),
                          labels = c('Number of individuals', 'Number of species'))) %>%
+  mutate(group = factor(group, levels = c('Auchenorhyncha', 'Heteroptera', 'Arachnida')) |>
+  fct_recode(`Auchenorrhyncha` = 'Auchenorhyncha')) |>
   ggplot(aes(treatment, value)) +
   geom_boxplot(
     aes(fill = treatment),
