@@ -4,7 +4,6 @@ library(tidyverse)
 library(broom)
 library(nlme)
 library(vegan)
-library(DSSAT)
 library(writexl)
 library(broom.mixed)
 library(patchwork)
@@ -53,7 +52,7 @@ anova(lme(log1p(cala_cover) ~ year * PC1 + year * PC2 + treatment * year, random
 anova(lme(richness ~ year * PC2 + treatment * year, random = ~1 | site / treatment, data = data))
 anova(lme(log(community_cover) ~ year, random = ~1 | site / treatment, data = data))
 anova(lme(evenness ~ year * PC1 + year * PC2 + treatment * year, random = ~1 | site / treatment, data = data))
-anova(lme(target ~year * PC2 + treatment * year, random = ~1 | site / treatment, data = data |> filter(site != 'KOS')))
+summary(lme(target ~year * PC2 + treatment * year, random = ~1 | site / treatment, data = data |> filter(site != 'KOS')))
 
 term_order <- c('(Intercept)', paste0('treatment', c(0, 2, 3, 4)), 'year', 'PC1', 'PC2',
                 paste0('year:', 'treatment', c(0, 2, 3, 4)),
@@ -113,7 +112,7 @@ mods |>
   write_xlsx('outputs/Anova Vegetation Univariate.xlsx')
 
 mods |>
-  mutate(tidy_df = map(models, broom::tidy),
+  mutate(tidy_df = map(models, broom.mixed::tidy),
          name = names(models)) |>
   select(name, tidy_df)|>
   unnest() |>
